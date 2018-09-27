@@ -1,0 +1,64 @@
+@import '../_shared';
+
+.container {
+	height: 90vh;
+}
+
+.mainImage {
+	height: 50%;
+	position: relative;
+	animation: fadein 1s ease-in;
+	margin: 0 auto;
+}
+
+.name {
+	color: orange;
+	font-weight: bold;
+	position: relative;
+	@include animation(fadein 2s ease-in 2s forwards, slideInFromAbove 1s ease-in 2s forwards);
+	opacity: 0;
+}
+.iamText {
+	opacity: 0;
+	position: relative;
+	@include animation(fadein 1s ease-in 1s forwards, slideInFromLeft 1s ease-in 1s forwards);
+}
+.subtitle {
+	opacity: 0;
+	@include animation(fadein 1s ease-in 3s forwards);
+}
+.emphasis {
+	@include animation(defaultColorToSecondary 1s ease-in 3.5s forwards);
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slideInFromAbove {
+	from {
+		top: -2rem;
+	}
+	to {
+		top: 0rem;
+	}
+}
+@keyframes slideInFromLeft {
+	from {
+		left: -2rem;
+	}
+	to {
+		left: 0rem;
+	}
+}
+@keyframes defaultColorToSecondary {
+	from {
+		color: $default-paragraph-color;
+	}
+	to {
+		color: $secondary-color;
+	}
+}

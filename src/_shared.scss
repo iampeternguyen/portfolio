@@ -1,0 +1,8 @@
+$default-paragraph-color: #333;
+$primary-color: orange;
+$secondary-color: #4aa8ff;
+
+@mixin animation($args...) {
+	-webkit-animation: $args;
+	animation: $args;
+}
