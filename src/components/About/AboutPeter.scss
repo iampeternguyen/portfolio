@@ -1,4 +1,4 @@
-@import '../_shared';
+@import '../../shared';
 
 .container {
 	height: 90vh;
@@ -30,6 +30,7 @@
 .emphasis {
 	@include animation(defaultColorToSecondary 1s ease-in 3.5s forwards);
 }
+
 @keyframes fadein {
 	from {
 		opacity: 0;

@@ -62,7 +62,7 @@
 }
 @keyframes defaultColorToSecondary {
   from {
-    color: #333;
+    color: #777;
   }
   to {
     color: #4aa8ff;

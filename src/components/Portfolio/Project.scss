@@ -1,0 +1,53 @@
+@import '../../shared';
+
+.container {
+	position: relative;
+	width: 100%;
+	@include animation(fadein 1s ease-in forwards, slideInFromBelow 1s ease-in forwards);
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slideInFromAbove {
+	from {
+		top: -2rem;
+	}
+	to {
+		top: 0rem;
+	}
+}
+
+@keyframes slideInFromBelow {
+	from {
+		top: 2rem;
+	}
+	to {
+		top: 0rem;
+	}
+}
+@keyframes slideInFromLeft {
+	from {
+		left: -2rem;
+	}
+	to {
+		left: 0rem;
+	}
+}
+@keyframes defaultColorToSecondary {
+	from {
+		color: $default-paragraph-color;
+	}
+	to {
+		color: $secondary-color;
+	}
+}
