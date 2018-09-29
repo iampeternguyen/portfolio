@@ -6,6 +6,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className={cssClasses['App']}>
+				<div className={cssClasses.backdrop} />
+
 				<header />
 				<Main />
 				<footer>Footer</footer>

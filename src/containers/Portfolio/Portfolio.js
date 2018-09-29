@@ -29,7 +29,7 @@ export default class Portfolio extends Component {
 
 		return (
 			<div>
-				<h1>Projects</h1>
+				<h1 id="Projects">Projects</h1>
 				{children}
 			</div>
 		);

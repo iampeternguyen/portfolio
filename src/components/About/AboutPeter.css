@@ -1,11 +1,20 @@
 .container {
   height: 90vh;
+  color: white;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.mainImageContainer {
+  overflow: hidden;
+  background: white;
+  -webkit-animation: clippingCircle 0.5s ease-out forwards;
+  animation: clippingCircle 0.5s ease-out forwards;
 }
 
 .mainImage {
-  height: 50%;
-  position: relative;
-  animation: fadein 1s ease-in;
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -25,7 +34,8 @@
   animation: fadein 1s ease-in 1s forwards, slideInFromLeft 1s ease-in 1s forwards;
 }
 
-.subtitle {
+.subtitle,
+.period {
   opacity: 0;
   -webkit-animation: fadein 1s ease-in 3s forwards;
   animation: fadein 1s ease-in 3s forwards;
@@ -34,6 +44,20 @@
 .emphasis {
   -webkit-animation: defaultColorToSecondary 1s ease-in 3.5s forwards;
   animation: defaultColorToSecondary 1s ease-in 3.5s forwards;
+}
+
+.triangle {
+  height: 0;
+  width: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid white;
+  opacity: 0;
+  -webkit-animation: fadein 1s ease-out 3s forwards;
+  animation: fadein 1s ease-out 3s forwards;
+}
+.triangle:hover {
+  border-top: 1rem solid #4aa8ff;
 }
 
 @keyframes fadein {
@@ -62,10 +86,26 @@
 }
 @keyframes defaultColorToSecondary {
   from {
-    color: #777;
+    color: white;
   }
   to {
     color: #4aa8ff;
+  }
+}
+@keyframes scaleToOne {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes clippingCircle {
+  0% {
+    clip-path: circle(0px at center);
+  }
+  100% {
+    clip-path: circle(7rem at center);
   }
 }
 

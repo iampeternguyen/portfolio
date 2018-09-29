@@ -1,4 +1,9 @@
+@import './shared';
+
 .App {
+	display: grid;
+	justify-items: center;
+	justify-content: center;
 	width: 100%;
 	text-align: center;
 }
@@ -9,10 +14,9 @@
 	height: 100vh;
 	top: 0;
 	left: 0;
-	background: #3d3d3d;
+	background: $background-grey;
 	z-index: -100;
-	-webkit-animation: scaleToOne 0.5s ease-out forwards;
-	animation: scaleToOne 0.5s ease-out forwards;
+	@include animation(scaleToOne 0.5s ease-out forwards);
 }
 
 @keyframes scaleToOne {
@@ -23,6 +27,5 @@
 		transform: scale(1);
 	}
 }
-/*# sourceMappingURL=App.css.map */
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */
